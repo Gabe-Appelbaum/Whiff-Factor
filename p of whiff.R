@@ -14,7 +14,7 @@ library(furrr)
 
 #### data pull ####
 # connecting to and pulling from my local DB
-sdb <- dbConnect(drv = SQLite(), "C:/Users/gabe2/Desktop/Data analysis projects/statcast db/statcast_db.sqlite")
+sdb <- 
 
 MLB <- dbGetQuery(
       sdb, 
@@ -393,4 +393,5 @@ catboost.save_model(results_list$rhp_breaking$model, "final models/RHP Breaking.
 catboost.save_model(results_list$rhp_offspeed$model, "final models/RHP Offspeed.cbm")
 catboost.save_model(results_list$lhp_fb$model, "final models/LHP FB.cbm")
 catboost.save_model(results_list$lhp_breaking$model, "final models/LHP Breaking.cbm")
+
 catboost.save_model(results_list$lhp_offspeed$model, "final models/LHP Offspeed.cbm")
