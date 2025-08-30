@@ -12,7 +12,7 @@ library(future)
 
 #### load in data, models and functions ####
 # pull data from my local db
-sdb <- dbConnect(drv = SQLite(), "C:/Users/gabe2/Desktop/Data analysis projects/statcast db/statcast_db.sqlite")
+sdb <- 
 
 MLB <- dbGetQuery(
       sdb, 
@@ -343,4 +343,5 @@ day_night_park_effects <- ranef(model)$stadium_term %>%
       rownames_to_column(var = "Stadium term")
 
 #saveRDS(model, "final models/MLB day night roof split mixed effects logistic.rds")
+
 #write_csv(day_night_park_effects, "final models/MLB day night roof split effects.csv")
