@@ -12,10 +12,7 @@ library(data.table)
 library(baseballr)
 
 #### load in data, models and functions ####
-sdb <- dbConnect(
-      drv = SQLite(), 
-      "C:/Users/gabe2/Desktop/Data analysis projects/statcast db/statcast_db.sqlite"
-)
+sdb <-
 
 AAA_query <- function(db, seasonID){
       dbGetQuery(
@@ -311,3 +308,4 @@ day_night_park_effects <- ranef(model)$stadium_term %>%
 
 saveRDS(model, "final models/AAA day night split mixed effects logistic.rds")
 write_csv(day_night_park_effects, "final models/AAA day night split effects.csv")
+
